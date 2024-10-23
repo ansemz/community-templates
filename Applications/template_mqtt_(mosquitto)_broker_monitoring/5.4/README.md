@@ -31,7 +31,7 @@ CONFIG
 
 ======================= CUT HERE ================================ 
 
-
+```
 # Mosquitto monitoring
 
 
@@ -49,7 +49,7 @@ CONFIG
 
 UserParameter=mosquitto[*],/etc/zabbix/scripts/mosquitto \$SYS/broker/$1 2>/dev/null
 
-
+```
 ======================= CUT HERE ================================ 
 
 
@@ -64,12 +64,12 @@ SCRIPT
 
 ======================= CUT HERE ================================ 
 
-
+```
 #!/bin/bash
 
 
-mosquitto\_sub -C 1 -u USERNAME -P PASSWORD -t "$1"
-
+mosquitto_sub -C 1 -u USERNAME -P PASSWORD -t "$1"
+```
 
 ======================= CUT HERE ================================ 
 
@@ -111,6 +111,8 @@ There are no discovery rules in this template.
 |MQTT Messages Stored|<p>-</p>|`Zabbix agent`|mosquitto[messages/stored]<p>Update: 30</p>|
 |MQTT AVG Bytes Received|<p>-</p>|`Zabbix agent`|mosquitto[load/bytes/received/5min]<p>Update: 30</p>|
 |MQTT AVG Messages Received|<p>-</p>|`Zabbix agent`|mosquitto[load/messages/received/5min]<p>Update: 30</p>|
+
+
 ## Triggers
 
 There are no triggers in this template.
